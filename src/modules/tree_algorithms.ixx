@@ -13,3 +13,4 @@ export import :RBTree;
 export import :AVLTree;
 export import :SplayTree;
 export import :TreapTree;
+export import :ScapeGoatTree;

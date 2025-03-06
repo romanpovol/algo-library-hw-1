@@ -16,6 +16,7 @@ template <typename T, typename Comp, typename Alloc> using AVLTreeType = trees::
 template <typename T, typename Comp, typename Alloc> using SplayTreeType = trees::SplayTree<T, Comp, Alloc>;
 template <typename T, typename Comp, typename Alloc> using TreapTreeType = trees::TreapTree<T, Comp, Alloc>;
 template <typename T, typename Comp, typename Alloc> using RBTreeType = trees::RBTree<T, Comp, Alloc>;
+template <typename T, typename Comp, typename Alloc> using ScapeGoatTreeType = trees::ScapeGoatTree<T, Comp, Alloc>;
 
 
 template <typename TreeType>
@@ -35,7 +36,8 @@ using TreeTypeTemplates = ::testing::Types<
     TreeTemplateWrapper<AVLTreeType>,
     TreeTemplateWrapper<SplayTreeType>,
     TreeTemplateWrapper<TreapTreeType>,
-    TreeTemplateWrapper<RBTreeType>
+    TreeTemplateWrapper<RBTreeType>,
+    TreeTemplateWrapper<ScapeGoatTreeType>
 >;
 
 template <typename TreeWrapper>
