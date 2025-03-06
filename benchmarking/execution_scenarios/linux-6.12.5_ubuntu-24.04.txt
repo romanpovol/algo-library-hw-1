@@ -3,7 +3,7 @@ Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.40
 Processor: aarch64
 RAM: 7.65 GB
 Reading configuration from: ../configs/benchmarking.yaml
-Configured Trees: ['RBTree', 'AVLTree', 'SplayTree', 'TreapTree']
+Configured Trees: ['RBTree', 'AVLTree', 'SplayTree', 'TreapTree', 'ScapeGoatTree']
 Benchmark Mode: all
 Memcheck Mode: False
 
@@ -120,3 +120,32 @@ REMOVAL:
         Total time elapsed: 72.2115ms
         Avg. time per operation: 0.000361058ms
 Total time: 187.702ms
+
+
+
+Running benchmark for tree: ScapeGoatTree with mode: all
+==== Output for ScapeGoatTree ====
+=== Report for 'ScapeGoatTree<int>', scenario 'RANDOM' ===
+INSERTION:
+        Operations executed: 200000
+        Total time elapsed: 160.815ms
+        Avg. time per operation: 0.000857912ms
+REMOVAL:
+        Operations executed: 200000
+        Succeeded (removed an element): 196417
+        Total time elapsed: 119.901ms
+        Avg. time per operation: 0.00056105ms
+Total time: 319.713ms
+
+
+=== Report for 'ScapeGoatTree<int>', scenario 'SORTED' ===
+INSERTION:
+        Operations executed: 200000
+        Total time elapsed: 81.1501ms
+        Avg. time per operation: 0.000395135ms
+REMOVAL:
+        Operations executed: 200000
+        Succeeded (removed an element): 200000
+        Total time elapsed: 87.4081ms
+        Avg. time per operation: 0.000410095ms
+Total time: 187.309ms

@@ -6,6 +6,7 @@ tree_benchmark_config:
     - AVLTree
     - SplayTree
     - TreapTree
+    - ScapeGoatTree
   parameters:
     benchmark_mode: "all"  # available modes: "all", "random", "sorted"
     memcheck_mode: false  # whether to execute the benchmarks with the valgrind massif tool (for memory consumption analysis)

@@ -13,7 +13,7 @@ struct TreeNode {
     explicit TreeNode(T value) : value(std::move(value)) {}
     virtual ~TreeNode() = default;
 
-    const T value;
+    T value;
     TreeNode *left = nullptr;
     TreeNode *right = nullptr;
 };

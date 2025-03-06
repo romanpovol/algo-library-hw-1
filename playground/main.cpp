@@ -28,6 +28,9 @@ namespace {
         if (name == "TreapTree") {
             return { "TreapTree<int>", std::make_unique<trees::TreapTree<int>>() };
         }
+        if (name == "ScapeGoatTree") {
+            return { "ScapeGoatTree<int>", std::make_unique<trees::ScapeGoatTree<int>>() };
+        }
         throw std::runtime_error("Unknown tree type provided: " + name);
     }
 
@@ -58,6 +61,7 @@ namespace {
  *  2. `RBTree`: Red-Black tree
  *  3. `SplayTree`: Splay tree
  *  4. `TreapTree`: Cartesian tree (Treap)
+ *  5. `ScapeGoatTree`: ScapeGoat tree 
  * 2. Benchmarking scenario: the scenario to use for benchmark. Available values:
  *  1. `all`: runs all available benchmarking scenarios
  *  2. `random`: see the description of the [Random::run].
