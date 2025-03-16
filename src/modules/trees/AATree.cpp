@@ -14,7 +14,6 @@ namespace trees {
 
     export template<typename T, typename Comp = std::less<T>, typename Alloc = std::allocator<T>>
     class AATree final : public BSTree<T, Comp, Alloc> {
-        // Используем rebinding для управления памятью узлов типа RBTreeNode<T>
         using NodeAllocatorType = typename std::allocator_traits<Alloc>::template rebind_alloc<AATreeNode<T>>;
 
     public:
@@ -23,7 +22,6 @@ namespace trees {
                   m_node_allocator(this->m_allocator)
         {}
 
-        // Вставка элемента с последующей балансировкой по алгоритму RB-дерева
         void insert(const T& value) override {
             root = insertNode(root, value);
             ++this->m_size;
@@ -44,7 +42,7 @@ namespace trees {
             return true;
         }
 
-        ~RBTree() override {
+        ~AATree() override {
             this->clear();
         }
 
