@@ -12,6 +12,7 @@ import tree_algorithms;
 
 // Define the tree types to test (extend this list as needed)
 // NOTE: extend these templates according to support testing for other tree types
+template <typename T, typename Comp, typename Alloc> using AATreeType = trees::AATree<T, Comp, Alloc>;
 template <typename T, typename Comp, typename Alloc> using AVLTreeType = trees::AVLTree<T, Comp, Alloc>;
 template <typename T, typename Comp, typename Alloc> using SplayTreeType = trees::SplayTree<T, Comp, Alloc>;
 template <typename T, typename Comp, typename Alloc> using TreapTreeType = trees::TreapTree<T, Comp, Alloc>;
@@ -33,6 +34,7 @@ struct TreeTemplateWrapper {
  * Insert new tree subclass here to run unit-tests on it.
  */
 using TreeTypeTemplates = ::testing::Types<
+    TreeTemplateWrapper<AATreeType>,
     TreeTemplateWrapper<AVLTreeType>,
     TreeTemplateWrapper<SplayTreeType>,
     TreeTemplateWrapper<TreapTreeType>,

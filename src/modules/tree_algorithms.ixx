@@ -8,6 +8,7 @@ module;
 export module tree_algorithms;
 
 // trees
+export import :AATree
 export import :BSTree;
 export import :RBTree;
 export import :AVLTree;

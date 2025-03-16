@@ -19,6 +19,7 @@ target_sources(${LIBRARY_TARGET}
     FILE_SET CXX_MODULES FILES
         ${PROJECT_SOURCE_DIR}/src/modules/tree_algorithms.ixx
         # trees
+        ${PROJECT_SOURCE_DIR}/src/modules/trees/AATree.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/trees/BSTree.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/trees/RBTree.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/trees/AVLTree.cpp
@@ -26,6 +27,7 @@ target_sources(${LIBRARY_TARGET}
         ${PROJECT_SOURCE_DIR}/src/modules/trees/TreapTree.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/trees/ScapeGoatTree.cpp
         # nodes
+        ${PROJECT_SOURCE_DIR}/src/modules/nodes/AATreeNode.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/nodes/TreeNode.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/nodes/RBTreeNode.cpp
         ${PROJECT_SOURCE_DIR}/src/modules/nodes/AVLTreeNode.cpp
